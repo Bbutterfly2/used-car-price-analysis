@@ -20,7 +20,8 @@ Deliver an interpretable, data-driven pricing intelligence system to:
 
 ### Mathematical Framing
 We model used car valuation as a continuous supervised regression problem:
-$$\hat{y} = f(X) + \epsilon, \quad y \in \mathbb{R}^+$$where$y$represents the transaction sale price ($USD), $X$ is the multidimensional feature matrix (continuous and categorical attributes), and $\epsilon \sim \mathcal{N}(0, \sigma^2)$ is the residual error.
+62714\hat{y} = f(X) + \epsilon, \quad y \in \mathbb{R}^+62714
+where $ represents the transaction sale price ($USD), $ is the multidimensional feature matrix (continuous and categorical attributes), and $\epsilon \sim \mathcal{N}(0, \sigma^2)$ is the residual error.
 
 ---
 
@@ -31,7 +32,7 @@ The study utilizes the Kaggle Used Cars Dataset comprising **426,880 listings** 
 * **Categorical Specifications:** `condition`, `cylinders`, `fuel`, `title_status`, `transmission`, `drive`, `type`, and `manufacturer`
 
 ### Key Empirical Findings:
-* **Extreme Artifacts & Skew:** The raw price distribution contained severe anomalies ranging from placeholder \$0 listings to invalid extreme values (\$3.7B).
+* **Extreme Artifacts & Skew:** The raw price distribution contained severe anomalies ranging from placeholder $0 listings to invalid extreme values ($3.7B).
 * **Fuel & Powertrain Premiums:** Diesel vehicles exhibit significantly higher median resale prices compared to conventional gasoline platforms.
 * **Drivetrain Elasticity:** Four-wheel drive (4WD) and all-wheel drive (AWD) configurations command steady price premiums across all vehicle age segments.
 * **Condition Monotonicity:** Resale value scales directly with declared condition, with salvage and fair-condition titles experiencing steep discount cliffs.
@@ -41,7 +42,7 @@ The study utilizes the Kaggle Used Cars Dataset comprising **426,880 listings** 
 ## 3. Data Preparation & Preprocessing Pipeline
 To prevent data contamination and prepare the feature space for linear modeling:
 * **Outlier Filtering:**
-  * Price bounded to **\$1,500 – \$80,000** (eliminates salvage scrap auctions and hyper-luxury collector outliers).
+  * Price bounded to **$1,500 – $80,000** (eliminates salvage scrap auctions and hyper-luxury collector outliers).
   * Odometer bounded to **500 – 280,000 miles** (eliminates rollbacks, test entries, and non-drivable wrecks).
   * Year restricted to **1995 – 2022** (focuses on standard retail financing inventory).
   * Cleaned analytic subset: **340,497 verified records**.
@@ -69,13 +70,13 @@ Models were benchmarked against the held-out 20% test partition (16,000 unseen v
 
 | Model | MAE ($) | RMSE ($) | $R^2$ Score |
 | :--- | :---: | :---: | :---: |
-| **Linear Regression** | \$4,414.82 | \$6,164.73 | 0.7642 |
-| **Ridge Regression (Tuned)** | **\$4,414.37** | **\$6,164.16** | **0.7642** |
-| **Lasso Regression (Tuned)** | \$4,414.69 | \$6,164.47 | 0.7642 |
+| **Linear Regression** | $4,414.82 | $6,164.73 | 0.7642 |
+| **Ridge Regression (Tuned)** | **$4,414.37** | **$6,164.16** | **0.7642** |
+| **Lasso Regression (Tuned)** | $4,414.69 | $6,164.47 | 0.7642 |
 
 ### Performance Rationale
-* **Mean Absolute Error (MAE):** Selected as the core operational metric (~**\$4,414**), reflecting the expected dollar variance for dealership trade-in appraisal tolerances.
-* **Root Mean Squared Error (RMSE):** Monitored (~**\$6,164**) to penalize large mispricing errors on higher-tier inventory.
+* **Mean Absolute Error (MAE):** Selected as the core operational metric (~**$4,414**), reflecting the expected dollar variance for dealership trade-in appraisal tolerances.
+* **Root Mean Squared Error (RMSE):** Monitored (~**$6,164**) to penalize large mispricing errors on higher-tier inventory.
 * **$R^2$ Score (~0.764):** Demonstrates that the regularized linear model successfully explains **>76.4%** of total price variance in the test partition.
 
 ---
