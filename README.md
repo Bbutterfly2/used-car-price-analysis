@@ -24,7 +24,7 @@ The study utilizes the Kaggle Used Cars Dataset comprising **426,880 listings** 
 ### Key Empirical Findings:
 * **Extreme Artifacts & Skew:** The raw price distribution contained severe anomalies ranging from placeholder $0 listings to invalid extreme values ($3.7B).
 * **Fuel & Powertrain Premiums:** Diesel vehicles exhibit significantly higher median resale prices compared to conventional gasoline platforms.
-* **Drivetrain Elasticity:** Four-wheel drive (4WD) and all-wheel drive (AWD) configurations command steady price premiums across all vehicle age segments.
+* **Drivetrain Elasticity:** Four-wheel drive and all-wheel drive configurations command steady price premiums across all vehicle age segments.
 * **Condition Monotonicity:** Resale value scales directly with declared condition, with salvage and fair-condition titles experiencing steep discount cliffs.
 
 ---
@@ -84,7 +84,7 @@ Extracting coefficients from the tuned Lasso model highlights the primary factor
 1. **Odometer Mileage:** Largest continuous downward pressure on vehicle price.
 2. **Vehicle Age:** Linear depreciation penalty compounding with mechanical wear.
 3. **Salvage / Rebuilt Titles:** Substantial price penalty that completely overrides low mileage or physical condition.
-4. **Front-Wheel Drive (FWD):** Strong downward valuation trend relative to 4WD platforms.
+4. **Front-Wheel Drive:** Strong downward valuation trend relative to 4WD platforms.
 
 ---
 
@@ -95,8 +95,8 @@ Extracting coefficients from the tuned Lasso model highlights the primary factor
 * **Seasonality Adjustments:** Stock 4WD inventory ahead of regional winter demand cycles to capture local price elasticity.
 
 ### 2. Risk Mitigation & Trade-in Appraisal
-* **The 100k-Mile Discount Buffer:** Enforce steeper automated discount haircuts for vehicles approaching or exceeding 100,000 miles to safeguard margin buffers.
-* **Strict Branded Title Exclusions:** Restrict trade-in allowances on branded or salvage titles to wholesale liquidation rates, avoiding retail lot placement.
+* **The 100k-Mile Discount Buffer:** Enforce steeper automated discount for vehicles approaching or exceeding 100,000 miles to safeguard margin buffers.
+* **Strict Branded Title Exclusions:** Restrict trade-in allowances on branded or salvage titles to wholesale rates, avoiding retail lot placement.
 
 ### 3. Operational Deployment
 * Integrate the regularized Lasso pricing equation into dealership CRM / lot appraisal tools to standardize appraisal baselines across lot managers.
