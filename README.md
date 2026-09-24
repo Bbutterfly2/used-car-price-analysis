@@ -5,7 +5,7 @@ An end-to-end predictive modeling and econometric analysis of used vehicle resal
 ---
 
 ## 🔗 Project Notebook
-* Direct link to executed notebook: [notebooks/prompt_II.ipynb](notebooks/prompt_II.ipynb)
+* Direct link to executed notebook: [notebooks/prompt_II.ipynb](notebooks/cars.ipynb)
 
 ---
 
