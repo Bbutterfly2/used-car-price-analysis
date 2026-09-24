@@ -13,11 +13,6 @@ Deliver an interpretable, data-driven pricing intelligence system to:
 2. **Mitigate Depreciation Exposure:** Empirically establish risk thresholds (e.g., mileage and age inflection points) to avoid toxic inventory.
 3. **Deploy Operational Valuation:** Provide transparent regression benchmarks for lot appraisal teams.
 
-### Mathematical Framing
-We model used car valuation as a continuous supervised regression problem:
-62714\hat{y} = f(X) + \epsilon, \quad y \in \mathbb{R}^+62714
-where $ represents the transaction sale price ($USD), $ is the multidimensional feature matrix (continuous and categorical attributes), and $\epsilon \sim \mathcal{N}(0, \sigma^2)$ is the residual error.
-
 ---
 
 ## 2. Dataset & Exploratory Data Analysis (EDA)
