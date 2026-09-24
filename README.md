@@ -49,9 +49,7 @@ To prevent data contamination and prepare the feature space for linear modeling:
 Three linear regression architectures were evaluated using **5-Fold Cross-Validation (`cv=5`)** with negative MSE scoring:
 1. **Ordinary Least Squares (OLS) Linear Regression:** Unpenalized baseline model.
 2. **Ridge Regression ($L_2$ Regularization):** Shrinks coefficient magnitudes to counter multicollinearity.
-   * *Optimal $\alpha = 1.0$*
 3. **Lasso Regression ($L_1$ Regularization):** Enforces sparsity by driving uninformative feature weights strictly to zero.
-   * *Optimal $\alpha = 0.1$*
 
 ---
 
