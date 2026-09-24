@@ -4,11 +4,6 @@ An end-to-end predictive modeling and econometric analysis of used vehicle resal
 
 ---
 
-## 🔗 Project Notebook
-* Direct link to executed notebook: [notebooks/Cars.ipynb](notebooks/cars.ipynb)
-
----
-
 ## 1. Executive Summary & Business Understanding
 Used vehicle dealerships operate in a dynamic, capital-intensive environment where inventory profitability is governed by precise valuation and rapid lot turnover. Overpaying at regional auto auctions or accepting over-valued trade-ins directly erodes dealership margins, while overpriced retail lot inventory increases holding costs and leads to steep forced markdowns.
 
